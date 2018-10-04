@@ -1,0 +1,887 @@
+indexes:
+- kind: "pepe"
+  properties:
+  - name: "__key__"
+    direction: desc
+
+- kind: pepe
+  properties:
+  - name: pepe_state
+  - name: sale_auction.end_time
+
+- kind: pepe
+  properties:
+  - name: pepe_state
+  - name: cozy_auction.end_time
+
+# ----------- cool_down_index -------------
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cool_down_index"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- gen -------------
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "gen"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- father -------------
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "father"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- mother -------------
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "mother"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.head.eyes.type -------------
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.eyes.type"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.head.hair.type -------------
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.hair.type"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.head.mouth -------------
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.head.mouth"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.body.shirt.type -------------
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.shirt.type"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.body.neck -------------
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.body.neck"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- look.extra.glasses.type -------------
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "look.extra.glasses.type"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- cozy_auction.seller -------------
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "cozy_auction.seller"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- sale_auction.seller -------------
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "sale_auction.seller"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- master -------------
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "master"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# ----------- pepe_state -------------
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "__key__"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "can_cozy_again"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "can_cozy_again"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "sale_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "sale_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "sale_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "sale_auction.end_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "cozy_auction.begin_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "cozy_auction.begin_price"
+    direction: desc
+
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "cozy_auction.end_price"
+    direction: asc
+- kind: "pepe"
+  properties:
+  - name: "pepe_state"
+  - name: "cozy_auction.end_price"
+    direction: desc
+
+# Generated 157 indexes!
+
+# DO NOT EDIT. This is file was generated using a custom index generator.

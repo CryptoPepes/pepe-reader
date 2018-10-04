@@ -1,0 +1,737 @@
+bio:
+  title:
+    title_adj:
+      dna:
+        pos: 0
+        length: 12
+      entries:
+        - content: "Professional"
+          rarity: 0.1
+          dominant: true
+        - content: "Happy"
+          rarity: 0.1
+          dominant: true
+        - content: "Lurking"
+          rarity: 0.1
+          dominant: true
+        - content: "Fat"
+          rarity: 0.1
+          dominant: true
+        - content: "Crying"
+          rarity: 0.1
+          dominant: true
+        - content: "Dope"
+          rarity: 0.1
+          dominant: true
+        - content: "Paranoid"
+          rarity: 0.1
+          dominant: true
+        - content: "Gangster"
+          rarity: 0.1
+          dominant: true
+        - content: "Thug"
+          rarity: 0.1
+          dominant: true
+        - content: "Scared"
+          rarity: 0.1
+          dominant: true
+
+    title_noun:
+      dna:
+        pos: 12
+        length: 12
+      entries:
+        - content: "Shitposter"
+          rarity: 0.1
+          dominant: true
+        - content: "Connoisseur"
+          rarity: 0.1
+          dominant: true
+        - content: "Hodler"
+          rarity: 0.1
+          dominant: true
+        - content: "Whale"
+          rarity: 0.1
+          dominant: true
+        - content: "Stoner"
+          rarity: 0.1
+          dominant: true
+        - content: "Pleeb"
+          rarity: 0.1
+          dominant: true
+        - content: "Normie"
+          rarity: 0.1
+          dominant: true
+        - content: "Degenerate"
+          rarity: 0.1
+          dominant: true
+        - content: "Hipster"
+          rarity: 0.1
+          dominant: true
+        - content: "Transsexual"
+          rarity: 0.1
+          dominant: true
+
+    suffix_adj:
+      dna:
+        pos: 24
+        length: 12
+      entries:
+        - content: "Rare"
+          rarity: 0.1
+          dominant: true
+        - content: "funny"
+          rarity: 0.1
+          dominant: true
+        - content: "stolen"
+          rarity: 0.1
+          dominant: true
+        - content: "overused"
+          rarity: 0.1
+          dominant: true
+        - content: "overrated"
+          rarity: 0.1
+          dominant: true
+        - content: "dank"
+          rarity: 0.1
+          dominant: true
+        - content: "hot"
+          rarity: 0.1
+          dominant: true
+        - content: "stealthy"
+          rarity: 0.1
+          dominant: true
+        - content: "old"
+          rarity: 0.1
+          dominant: true
+        - content: "black"
+          rarity: 0.1
+          dominant: true
+        - content: "canceled"
+          rarity: 0.1
+          dominant: true
+        - content: "goofy"
+          rarity: 0.1
+          dominant: true
+        - content: "lit"
+          rarity: 0.1
+          dominant: true
+        - content: "salty"
+          rarity: 0.1
+          dominant: true
+
+    suffix_noun:
+      dna:
+        pos: 36
+        length: 12
+      entries:
+        - content: "greentexts"
+          rarity: 0.1
+          dominant: true
+        - content: "memes"
+          rarity: 0.1
+          dominant: true
+        - content: "vlogs"
+          rarity: 0.1
+          dominant: true
+        - content: "pop songs"
+          rarity: 0.1
+          dominant: true
+        - content: "cat images"
+          rarity: 0.1
+          dominant: true
+        - content: "tv shows"
+          rarity: 0.1
+          dominant: true
+        - content: "antique"
+          rarity: 0.1
+          dominant: true
+        - content: "routers"
+          rarity: 0.1
+          dominant: true
+        - content: "ballpens"
+          rarity: 0.1
+          dominant: true
+        - content: "drugs"
+          rarity: 0.1
+          dominant: true
+
+  intro:
+    scream:
+      dna:
+        pos: 48
+        length: 12
+      entries:
+        - content: "GDAY!"
+          rarity: 0.1
+          dominant: true
+        - content: "Wow!"
+          rarity: 0.1
+          dominant: true
+        - content: "Ouch!"
+          rarity: 0.1
+          dominant: true
+        - content: "Ugh!"
+          rarity: 0.1
+          dominant: true
+        - content: "Yo."
+          rarity: 0.1
+          dominant: true
+        - content: "Waddup?"
+          rarity: 0.1
+          dominant: true
+        - content: "Sup??"
+          rarity: 0.1
+          dominant: true
+        - content: "Moh!"
+          rarity: 0.1
+          dominant: true
+        - content: "Holla!"
+          rarity: 0.1
+          dominant: true
+        - content: "A-yo."
+          rarity: 0.1
+          dominant: true
+        - content: "Howzit?"
+          rarity: 0.1
+          dominant: true
+        - content: "Wassap."
+          rarity: 0.1
+          dominant: true
+        - content: "Whats in the bag?"
+          rarity: 0.1
+          dominant: true
+        - content: "Whats poppin?"
+          rarity: 0.1
+          dominant: true
+        - content: "Suh?"
+          rarity: 0.1
+          dominant: true
+
+    saying:
+      dna:
+        pos: 60
+        length: 12
+      entries:
+        - content: "They see me rollin'."
+          rarity: 0.1
+          dominant: true
+        - content: "Keep walking."
+          rarity: 0.1
+          dominant: true
+        - content: "Catch me if you can!"
+          rarity: 0.1
+          dominant: true
+        - content: "Gotta catch m all."
+          rarity: 0.1
+          dominant: true
+        - content: "No ragrets."
+          rarity: 0.1
+          dominant: true
+        - content: "Wanna get high?"
+          rarity: 0.1
+          dominant: true
+        - content: "I am your father."
+          rarity: 0.1
+          dominant: true
+        - content: "Thug life chose me."
+          rarity: 0.1
+          dominant: true
+        - content: "Do you have a second to talk about jesus?"
+          rarity: 0.1
+          dominant: true
+        - content: "That's lit bro!"
+          rarity: 0.1
+          dominant: true
+
+    self_description:
+      dna:
+        pos: 72
+        length: 12
+      entries:
+        - content: "I like to keep things trill."
+          rarity: 0.1
+          dominant: true
+        - content: "I once tried to fush roh dah a stranger."
+          rarity: 0.1
+          dominant: true
+        - content: "I like my coffee like my soul. Pure black."
+          rarity: 0.1
+          dominant: true
+        - content: "Chicks dig my vaping skills. Everytime I vape they giggle."
+          rarity: 0.1
+          dominant: true
+        - content: "I love going to starbucks on my horse."
+          rarity: 0.1
+          dominant: true
+        - content: "When I am not boat spotting I love to collect rare stamps."
+          rarity: 0.1
+          dominant: true
+        - content: "Come closer... I know what it's like to lose someone, too."
+          rarity: 0.1
+          dominant: true
+        - content: "are you truly woke? Jetfuel can’t melt steal beams. "
+          rarity: 0.1
+          dominant: true
+        - content: "IM SO EXTRA. EVERYTHING I DO, I DO IN CAPSLOCK."
+          rarity: 0.1
+          dominant: true
+        - content: "I am not unemployed. I create art."
+          rarity: 0.1
+          dominant: true
+
+
+  ilike:
+    start:
+      dna:
+        pos: 84
+        length: 4
+      entries:
+        - content: "I like"
+          rarity: 0.1
+          dominant: true
+        - content: "I am here"
+          rarity: 0.1
+          dominant: true
+        - content: "It's time"
+          rarity: 0.1
+          dominant: true
+
+    subject:
+      dna:
+        pos: 88
+        length: 12
+      entries:
+        - content: "to kick ass and chew bubblegum"
+          rarity: 0.1
+          dominant: true
+        - content: "to buy high sell low"
+          rarity: 0.1
+          dominant: true
+        - content: "to make spaghet"
+          rarity: 0.1
+          dominant: true
+        - content: "to shitpost on b"
+          rarity: 0.1
+          dominant: true
+        - content: "to flag lgbt youtube videos"
+          rarity: 0.1
+          dominant: true
+        - content: "to feed street dogs"
+          rarity: 0.1
+          dominant: true
+        - content: "to do the charizard"
+          rarity: 0.1
+          dominant: true
+        - content: "to show everyone I use apple."
+          rarity: 0.1
+          dominant: true
+        - content: "to bang my head on doorknobs "
+          rarity: 0.1
+          dominant: true
+        - content: "to volunteer in planting trees"
+          rarity: 0.1
+          dominant: true
+        - content: "to drink till I drop"
+          rarity: 0.1
+          dominant: true
+
+    while_topic:
+      dna:
+        pos: 100
+        length: 12
+      entries:
+        - content: "when it's Tuesday"
+          rarity: 0.1
+          dominant: true
+        - content: "on a foggy night"
+          rarity: 0.1
+          dominant: true
+        - content: "on a cruise"
+          rarity: 0.1
+          dominant: true
+        - content: "in the Caribbean"
+          rarity: 0.1
+          dominant: true
+        - content: "on the moon"
+          rarity: 0.1
+          dominant: true
+        - content: "in my bed"
+          rarity: 0.1
+          dominant: true
+        - content: "behind a car"
+          rarity: 0.1
+          dominant: true
+        - content: "when I wake up"
+          rarity: 0.1
+          dominant: true
+        - content: "back in 1960"
+          rarity: 0.1
+          dominant: true
+        - content: "after midnight"
+          rarity: 0.1
+          dominant: true
+
+  twist:
+    call_out:
+      dna:
+        pos: 112
+        length: 12
+      entries:
+        - content: ", because why not?"
+          rarity: 0.1
+          dominant: true
+        - content: ", you know that is the best."
+          rarity: 0.1
+          dominant: true
+        - content: ", I’m sure you would too!"
+          rarity: 0.1
+          dominant: true
+        - content: ", don’t judge me!"
+          rarity: 0.1
+          dominant: true
+        - content: ", someone has to do it..."
+          rarity: 0.1
+          dominant: true
+        - content: " because the end is near."
+          rarity: 0.1
+          dominant: true
+        - content: " to relief stress."
+          rarity: 0.1
+          dominant: true
+        - content: ", for research purposes!"
+          rarity: 0.1
+          dominant: true
+        - content: " to cleanse the world."
+          rarity: 0.1
+          dominant: true
+        - content: " in the name of Kek."
+          rarity: 0.1
+          dominant: true
+
+    question:
+      dna:
+        pos: 124
+        length: 12
+      entries:
+        - content: "Do you like my hair?"
+          rarity: 0.1
+          dominant: true
+        - content: "Wanna dance?"
+          rarity: 0.1
+          dominant: true
+        - content: "Want to have a fun time?"
+          rarity: 0.1
+          dominant: true
+        - content: "Do you like math?"
+          rarity: 0.1
+          dominant: true
+        - content: "What is the answer to life?"
+          rarity: 0.1
+          dominant: true
+        - content: "When moon?"
+          rarity: 0.1
+          dominant: true
+        - content: "Do you got a fire?"
+          rarity: 0.1
+          dominant: true
+        - content: "Can you spare me a dime?"
+          rarity: 0.1
+          dominant: true
+        - content: "Who came first? The egg of the frog."
+          rarity: 0.1
+          dominant: true
+        - content: "Is your favorite color green too?"
+          rarity: 0.1
+          dominant: true
+
+  end_wish:
+    start:
+      dna:
+        pos: 136
+        length: 12
+      entries:
+        - content: "I am looking forward to"
+          rarity: 0.1
+          dominant: true
+        - content: "I hope I can"
+          rarity: 0.1
+          dominant: true
+        - content: "Maybe I am able to"
+          rarity: 0.1
+          dominant: true
+        - content: "One day I will"
+          rarity: 0.1
+          dominant: true
+        - content: "Hope I am able to"
+          rarity: 0.1
+          dominant: true
+        - content: "I insist to"
+          rarity: 0.1
+          dominant: true
+        - content: "We will"
+          rarity: 0.1
+          dominant: true
+        - content: "The future arranges for me to"
+          rarity: 0.1
+          dominant: true
+        - content: "One time soon I plan to"
+          rarity: 0.1
+          dominant: true
+        - content: "Later I plan to"
+          rarity: 0.1
+          dominant: true
+
+    end:
+      dna:
+        pos: 148
+        length: 12
+      entries:
+        - content: "meet someone special."
+          rarity: 0.1
+          dominant: true
+        - content: "destroy the universe."
+          rarity: 0.1
+          dominant: true
+        - content: "pay $big_hack back."
+          rarity: 0.1
+          dominant: true
+        - content: "have a dance together."
+          rarity: 0.1
+          dominant: true
+        - content: "collect them all."
+          rarity: 0.1
+          dominant: true
+        - content: "destroy the banks."
+          rarity: 0.1
+          dominant: true
+        - content: "set up a business."
+          rarity: 0.1
+          dominant: true
+        - content: "reach mars."
+          rarity: 0.1
+          dominant: true
+        - content: "own a island."
+          rarity: 0.1
+          dominant: true
+        - content: "build a yacht."
+          rarity: 0.1
+          dominant: true
+
+  additional:
+    quote:
+      dna:
+        pos: 160
+        length: 12
+      entries:
+        - content: "A lot of people are afraid of heights. Not me, I'm afraid of widths."
+          rarity: 0.1
+          dominant: true
+        - content: "Cryptocurrency Protocols Are Like Onions."
+          rarity: 0.1
+          dominant: true
+        - content: "I will eat my d*ck on national television."
+          rarity: 0.1
+          dominant: true
+        - content: "If you don't believe it or don't get it, I don't have the time to try to convince you, sorry."
+          rarity: 0.1
+          dominant: true
+        - content: "Fresh in the news: old man yells at Bitcoin."
+          rarity: 0.1
+          dominant: true
+
+    end_scream:
+      dna:
+        pos: 172
+        length: 12
+      entries:
+        - content: "Also, get OFF MY LAWN!"
+          rarity: 0.1
+          dominant: true
+        - content: "HOOWWDYYHOOO!?"
+          rarity: 0.1
+          dominant: true
+        - content: "FUSH ROH DAH!"
+          rarity: 0.1
+          dominant: true
+        - content: "PIKA! PIKA!"
+          rarity: 0.1
+          dominant: true
+        - content: "KAMEHAKEMEHAA!"
+          rarity: 0.1
+          dominant: true
+        - content: "All OF YOUR BASE ARE BELONG TO US."
+          rarity: 0.1
+          dominant: true
+        - content: "SHOW BEBS AND VEGENA."
+          rarity: 0.1
+          dominant: true
+        - content: "DO YOU KNOW DI WAY?"
+          rarity: 0.1
+          dominant: true
+        - content: "MAKE CRYPTO GREAT AGAIN!"
+          rarity: 0.1
+          dominant: true
+        - content: "MAKE $shitcoin GREAT AGAIN!"
+          rarity: 0.1
+          dominant: true
+        - content: "PLAY UNO & GET HIGH."
+          rarity: 0.1
+          dominant: true
+
+    sad_ending:
+      dna:
+        pos: 184
+        length: 12
+      entries:
+        - content: "Please leave me..."
+          rarity: 0.1
+          dominant: true
+        - content: "I’ve lost the power."
+          rarity: 0.1
+          dominant: true
+        - content: "Its not use. Leave me!"
+          rarity: 0.1
+          dominant: true
+        - content: "I can't hear you!"
+          rarity: 0.1
+          dominant: true
+        - content: "I missed the $shitcoin ICO."
+          rarity: 0.1
+          dominant: true
+        - content: "Losing money in the $big_hack hack was not fun."
+          rarity: 0.1
+          dominant: true
+        - content: "TL;DR : desperate mf"
+          rarity: 0.1
+          dominant: true
+        - content: "Tinder blocked me for being ugly."
+          rarity: 0.1
+          dominant: true
+        - content: "Someday an overdose will be my end."
+          rarity: 0.1
+          dominant: true
+        - content: "I hope they got airco in hell."
+          rarity: 0.1
+          dominant: true
+        - content: "Nobody cares..."
+          rarity: 0.1
+          dominant: true
+        - content: "heuheuheu...."
+          rarity: 0.1
+          dominant: true
+
+    help_request:
+      dna:
+        pos: 196
+        length: 12
+      entries:
+        - content: "Wait for me on the moon! $shitcoin!"
+          rarity: 0.1
+          dominant: true
+        - content: "I want to explore more wallets. Please?"
+          rarity: 0.1
+          dominant: true
+        - content: "I just love transfers ;) "
+          rarity: 0.1
+          dominant: true
+        - content: "Cozy time Cozy time? Cozy time!"
+          rarity: 0.1
+          dominant: true
+        - content: "I just think monogamy is not for me."
+          rarity: 0.1
+          dominant: true
+        - content: "My dream is to be owned by $crypto_celeb"
+          rarity: 0.1
+          dominant: true
+
+lists:
+  crypto_celeb:
+    dna:
+      pos: 208
+      length: 10
+    entries:
+      - content: "John McAfee"
+        rarity: 0.1
+        dominant: true
+      - content: "the Winklevoss twins"
+        rarity: 0.1
+        dominant: true
+      - content: "Roger Ver"
+        rarity: 0.1
+        dominant: true
+      - content: "Brock Pierce"
+        rarity: 0.1
+        dominant: true
+      - content: "Vitalik Buterin"
+        rarity: 0.1
+        dominant: true
+      - content: "Warren Buffett"
+        rarity: 0.1
+        dominant: true
+
+  big_hack:
+    dna:
+      pos: 218
+      length: 10
+    entries:
+      - content: "DAO"
+        rarity: 0.1
+        dominant: true
+      - content: "Mt.gox"
+        rarity: 0.1
+        dominant: true
+      - content: "Coincheck"
+        rarity: 0.1
+        dominant: true
+      - content: "Bitfinex"
+        rarity: 0.1
+        dominant: true
+      - content: "Bitgrail"
+        rarity: 0.1
+        dominant: true
+
+  shitcoin:
+    dna:
+      pos: 228
+      length: 16
+    entries:
+      - content: "DGB"
+        rarity: 0.1
+        dominant: true
+      - content: "doge"
+        rarity: 0.1
+        dominant: true
+      - content: "XVG"
+        rarity: 0.1
+        dominant: true
+      - content: "MEME"
+        rarity: 0.1
+        dominant: true
+      - content: "BitConnect"
+        rarity: 0.1
+        dominant: true
+
+  shit_people_say:
+    dna:
+      pos: 246
+      length: 10
+    entries:
+      - content: "hodl"
+        rarity: 0.1
+        dominant: true
+      - content: "moon"
+        rarity: 0.1
+        dominant: true
+      - content: "fomo"
+        rarity: 0.1
+        dominant: true
+      - content: "bear"
+        rarity: 0.1
+        dominant: true
+      - content: "whale"
+        rarity: 0.1
+        dominant: true
+      - content: "bull"
+        rarity: 0.1
+        dominant: true
