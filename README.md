@@ -71,15 +71,15 @@ dokku apps:create reader
 # Configure start
 # Light-mode:
 dokku config:set reader DOKKU_DOCKERFILE_START_CMD="--rpc=wss://ropsten.infura.io/ws \
---token-address=0x488d86612396f76c304413d8463cbb36b9b834e8 \
---sale-auction-address=0x1086c166ef05fb94a969696aae491cdb22ecc316 \
---cozy-auction-address=0x2a5940a561ad99c8787dee06af8dd2cc6ece5fea \
+--token-address=0x966383a597372cd2dea4d247a69db5a1fce8d3da \
+--sale-auction-address=0xb1a4c9e7c5fb6866c1103a239f3cd333d36276d2 \
+--cozy-auction-address=0x8fd285424995dd2adace2a3d0acb550717690367 \
 --backfills=false"
 # Full/backfill mode:
 dokku config:set --no-restart reader DOKKU_DOCKERFILE_START_CMD="--rpc=/root/.ethereum/testnet/geth.ipc \
---token-address=0x488d86612396f76c304413d8463cbb36b9b834e8 \
---sale-auction-address=0x1086c166ef05fb94a969696aae491cdb22ecc316 \
---cozy-auction-address=0x2a5940a561ad99c8787dee06af8dd2cc6ece5fea \
+--token-address=0x966383a597372cd2dea4d247a69db5a1fce8d3da \
+--sale-auction-address=0xb1a4c9e7c5fb6866c1103a239f3cd333d36276d2 \
+--cozy-auction-address=0x8fd285424995dd2adace2a3d0acb550717690367 \
 --backfills=true"
 
 dokku config:set reader GOOGLE_APPLICATION_CREDENTIALS="datastore-key.json"
