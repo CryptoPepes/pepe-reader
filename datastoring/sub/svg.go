@@ -13,6 +13,12 @@ import (
 func SvgUpdate(evCtx *event.EventContext, trig *triggers.Trigger) error {
 
 	pepeId := trig.PepeId
+
+	// Ignore events for pepe 0, this pepe is artificial, and burnt from the start.
+	if pepeId.Uint64() == 0 {
+		return nil
+	}
+
 	dataKey := convert.PepeIdToSVGKey(pepeId)
 
 	var err error
