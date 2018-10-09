@@ -204,11 +204,18 @@ dokku config:set testnode DOKKU_DOCKERFILE_START_CMD="--testnet --syncmode=fast 
 # Go to geth dir
 cd "$GOPATH/src/github.com/ethereum/go-ethereum"
 
+# Checkout a stable version of choice
+git checkout v1.8.16
+
 # Add dokku test remote
 git remote add ocean-testnode dokku@123.100.123.100:testnode
 
+# Start ssh-agent, add ssh key
+
 # Deploy (targetting master branch, from whatever branch to deploy with)
 git push ocean-testnode <my branch>:master
+# E.g.: git push ocean-mainnode v1.8.16:master
+
 
 ```
 

@@ -16,10 +16,10 @@ import (
 )
 
 // CozyABI is the input ABI used to generate the binding from.
-const CozyABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"affiliateContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"pepeContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"setBeneficiary\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"}],\"name\":\"calculateBid\",\"outputs\":[{\"name\":\"currentBid\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"auctions\",\"outputs\":[{\"name\":\"seller\",\"type\":\"address\"},{\"name\":\"pepeId\",\"type\":\"uint256\"},{\"name\":\"auctionBegin\",\"type\":\"uint64\"},{\"name\":\"auctionEnd\",\"type\":\"uint64\"},{\"name\":\"beginPrice\",\"type\":\"uint256\"},{\"name\":\"endPrice\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"changeFee\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FEE_DIVIDER\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"}],\"name\":\"savePepe\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getFees\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"fee\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_pepeContract\",\"type\":\"address\"},{\"name\":\"_affiliateContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"winner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionWon\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionFinalized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_beginPrice\",\"type\":\"uint256\"},{\"name\":\"_endPrice\",\"type\":\"uint256\"},{\"name\":\"_duration\",\"type\":\"uint64\"}],\"name\":\"startAuction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_beginPrice\",\"type\":\"uint256\"},{\"name\":\"_endPrice\",\"type\":\"uint256\"},{\"name\":\"_duration\",\"type\":\"uint64\"},{\"name\":\"_seller\",\"type\":\"address\"}],\"name\":\"startAuctionDirect\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_cozyCandidate\",\"type\":\"uint256\"},{\"name\":\"_candidateAsFather\",\"type\":\"bool\"},{\"name\":\"_pepeReceiver\",\"type\":\"address\"}],\"name\":\"buyCozy\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_cozyCandidate\",\"type\":\"uint256\"},{\"name\":\"_candidateAsFather\",\"type\":\"bool\"},{\"name\":\"_pepeReceiver\",\"type\":\"address\"},{\"name\":\"_affiliate\",\"type\":\"address\"}],\"name\":\"buyCozyAffiliated\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}]"
+const CozyABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"affiliateContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"pepeContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"setBeneficiary\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"}],\"name\":\"calculateBid\",\"outputs\":[{\"name\":\"currentBid\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"auctions\",\"outputs\":[{\"name\":\"seller\",\"type\":\"address\"},{\"name\":\"pepeId\",\"type\":\"uint256\"},{\"name\":\"auctionBegin\",\"type\":\"uint64\"},{\"name\":\"auctionEnd\",\"type\":\"uint64\"},{\"name\":\"beginPrice\",\"type\":\"uint256\"},{\"name\":\"endPrice\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"changeFee\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FEE_DIVIDER\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"}],\"name\":\"savePepe\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getFees\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"fee\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_pepeContract\",\"type\":\"address\"},{\"name\":\"_affiliateContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"winner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionWon\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"pepe\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"seller\",\"type\":\"address\"}],\"name\":\"AuctionFinalized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"}],\"name\":\"OwnershipRenounced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_beginPrice\",\"type\":\"uint256\"},{\"name\":\"_endPrice\",\"type\":\"uint256\"},{\"name\":\"_duration\",\"type\":\"uint64\"}],\"name\":\"startAuction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_beginPrice\",\"type\":\"uint256\"},{\"name\":\"_endPrice\",\"type\":\"uint256\"},{\"name\":\"_duration\",\"type\":\"uint64\"},{\"name\":\"_seller\",\"type\":\"address\"}],\"name\":\"startAuctionDirect\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_cozyCandidate\",\"type\":\"uint256\"},{\"name\":\"_candidateAsFather\",\"type\":\"bool\"},{\"name\":\"_pepeReceiver\",\"type\":\"address\"}],\"name\":\"buyCozy\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_pepeId\",\"type\":\"uint256\"},{\"name\":\"_cozyCandidate\",\"type\":\"uint256\"},{\"name\":\"_candidateAsFather\",\"type\":\"bool\"},{\"name\":\"_pepeReceiver\",\"type\":\"address\"},{\"name\":\"_affiliate\",\"type\":\"address\"}],\"name\":\"buyCozyAffiliated\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}]"
 
 // CozyBin is the compiled bytecode used for deploying new contracts.
-const CozyBin = `0x608060405261927c60055534801561001657600080fd5b5060405160408061123d8339810160405280516020909101516000805433600160a060020a0319918216811783556001805483169091179055600380548216600160a060020a0395861617905560048054909116939092169290921790556111b990819061008490396000f3006080604052600436106100f05763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630117200581146100f55780631887a4d0146101265780631c31f7101461013b5780632d4a170a1461015e57806338af3eed14610188578063571a26a01461019d5780636a1db1bf146101ff57806374a25d431461021757806378d6ade4146102425780638da5cb5b14610257578063a6da467c1461026c578063a8f5c67314610291578063d024cd02146102a9578063d3ce71df146102e0578063db8d55f1146102ff578063ddca3f4314610314578063f2fde38b14610329575b600080fd5b34801561010157600080fd5b5061010a61034a565b60408051600160a060020a039092168252519081900360200190f35b34801561013257600080fd5b5061010a610359565b34801561014757600080fd5b5061015c600160a060020a0360043516610368565b005b34801561016a57600080fd5b506101766004356103ae565b60408051918252519081900360200190f35b34801561019457600080fd5b5061010a610453565b3480156101a957600080fd5b506101b5600435610462565b60408051600160a060020a039097168752602087019590955267ffffffffffffffff93841686860152919092166060850152608084019190915260a0830152519081900360c00190f35b34801561020b57600080fd5b5061015c6004356104b5565b34801561022357600080fd5b5061015c60043560243560443567ffffffffffffffff606435166104df565b34801561024e57600080fd5b50610176610598565b34801561026357600080fd5b5061010a61059f565b61015c6004356024356044351515600160a060020a03606435811690608435166105ae565b34801561029d57600080fd5b5061015c60043561064c565b3480156102b557600080fd5b5061015c60043560243560443567ffffffffffffffff60643516600160a060020a03608435166107ce565b61015c6004356024356044351515600160a060020a0360643516610882565b34801561030b57600080fd5b5061015c610d0a565b34801561032057600080fd5b50610176610d47565b34801561033557600080fd5b5061015c600160a060020a0360043516610d4d565b600454600160a060020a031681565b600354600160a060020a031681565b600054600160a060020a0316331461037f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600081815260026020819052604082209081015467ffffffffffffffff808216429081039285928392839283926801000000000000000090910416116103fa5785600401549650610448565b600386015460048701546002880154919003945067ffffffffffffffff80821668010000000000000000909204160392508285850281151561043857fe5b0591508186600301540190508096505b505050505050919050565b600154600160a060020a031681565b600260208190526000918252604090912080546001820154928201546003830154600490930154600160a060020a03909216939267ffffffffffffffff8083169368010000000000000000909304169186565b600054600160a060020a031633146104cc57600080fd5b60055481106104da57600080fd5b600555565b600354604080517f62bc63c40000000000000000000000000000000000000000000000000000000081526004810187905290514292600160a060020a0316916362bc63c49160248083019260209291908290030181600087803b15801561054557600080fd5b505af1158015610559573d6000803e3d6000fd5b505050506040513d602081101561056f57600080fd5b505167ffffffffffffffff16111561058657600080fd5b61059284848484610de1565b50505050565b620f424081565b600054600160a060020a031681565b60048054604080517f7352e4b8000000000000000000000000000000000000000000000000000000008152600160a060020a0386811694820194909452848416602482015290519290911691637352e4b89160448082019260009290919082900301818387803b15801561062157600080fd5b505af1158015610635573d6000803e3d6000fd5b5050505061064585858585610882565b5050505050565b60008181526002602081905260409091200154426801000000000000000090910467ffffffffffffffff161061068157600080fd5b60035460008281526002602090815260408083205481517fa9059cbb000000000000000000000000000000000000000000000000000000008152600160a060020a03918216600482015260248101879052915194169363a9059cbb93604480840194938390030190829087803b1580156106fa57600080fd5b505af115801561070e573d6000803e3d6000fd5b505050506040513d602081101561072457600080fd5b5051151561073157600080fd5b600081815260026020526040808220549051600160a060020a039091169183917f95b73f79c6d7b09d4dd9a323589aec50a424621f53a70ece1cc21aa75554b5199190a360009081526002602081905260408220805473ffffffffffffffffffffffffffffffffffffffff191681556001810183905590810180546fffffffffffffffffffffffffffffffff191690556003810182905560040155565b600354604080517f62bc63c40000000000000000000000000000000000000000000000000000000081526004810188905290514292600160a060020a0316916362bc63c49160248083019260209291908290030181600087803b15801561083457600080fd5b505af1158015610848573d6000803e3d6000fd5b505050506040513d602081101561085e57600080fd5b505167ffffffffffffffff16111561087557600080fd5b6106458585858585610fe1565b600354600090819081908190600160a060020a031633146108a257600080fd5b60008881526002602081905260409091209081015490945068010000000000000000900467ffffffffffffffff1642106108db57600080fd5b6108e4886103ae565b9250348311156108f357600080fd5b600554620f42409084028554604051929091049350600160a060020a03169083850380156108fc02916000818181858888f1935050505015801561093b573d6000803e3d6000fd5b5060048054604080517f873abd75000000000000000000000000000000000000000000000000000000008152600160a060020a03898116948201949094529051929091169163873abd75916024808201926020929091908290030181600087803b1580156109a857600080fd5b505af11580156109bc573d6000803e3d6000fd5b505050506040513d60208110156109d257600080fd5b50519050600160a060020a03811615801590610a115750604051600160a060020a038216906002840480156108fc02916000818181858888f193505050505b508515610acf576003546001850154604080517fc29338cf0000000000000000000000000000000000000000000000000000000081526004810192909252602482018a9052600160a060020a038881166044840152905192169163c29338cf916064808201926020929091908290030181600087803b158015610a9357600080fd5b505af1158015610aa7573d6000803e3d6000fd5b505050506040513d6020811015610abd57600080fd5b50511515610aca57600080fd5b610b81565b6003546001850154604080517fc29338cf000000000000000000000000000000000000000000000000000000008152600481018b90526024810192909252600160a060020a038881166044840152905192169163c29338cf916064808201926020929091908290030181600087803b158015610b4a57600080fd5b505af1158015610b5e573d6000803e3d6000fd5b505050506040513d6020811015610b7457600080fd5b50511515610b8157600080fd5b6003548454604080517fa9059cbb000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152602481018c90529051919092169163a9059cbb9160448083019260209291908290030181600087803b158015610bf257600080fd5b505af1158015610c06573d6000803e3d6000fd5b505050506040513d6020811015610c1c57600080fd5b50511515610c2957600080fd5b82341115610c6b57604051600160a060020a038616903485900380156108fc02916000818181858888f19350505050158015610c69573d6000803e3d6000fd5b505b8354604051600160a060020a03918216918716908a907f94ffdfa810a5f08da0ec8ea0f74619814453cfc101a90504a3a8f77e0eb6198690600090a4505050600094855250506002602081905260408420805473ffffffffffffffffffffffffffffffffffffffff191681556001810185905590810180546fffffffffffffffffffffffffffffffff1916905560038101849055600401929092555050565b600154604051600160a060020a0390911690303180156108fc02916000818181858888f19350505050158015610d44573d6000803e3d6000fd5b50565b60055481565b600054600160a060020a03163314610d6457600080fd5b600160a060020a0381161515610d7957600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b610de9611158565b600354604080517f23b872dd000000000000000000000000000000000000000000000000000000008152336004820152306024820152604481018890529051600160a060020a03909216916323b872dd916064808201926020929091908290030181600087803b158015610e5c57600080fd5b505af1158015610e70573d6000803e3d6000fd5b505050506040513d6020811015610e8657600080fd5b50511515610e9357600080fd5b6000858152600260208190526040909120015468010000000000000000900467ffffffffffffffff164211610ec757600080fd5b338152602081018590524267ffffffffffffffff81811660408401819052918401166060830181905211610efa57600080fd5b6080810184815260a0820184815260008781526002602081815260408084208751815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03909116178155918701516001830155808701519282018054606089015167ffffffffffffffff1990911667ffffffffffffffff958616176fffffffffffffffff000000000000000019166801000000000000000095909116949094029390931790925593516003850155915160049093019290925551339187917f16da476d7265fc95576888b93de4fa4849d6cea1228235887f569c6530ddfec19190a35050505050565b610fe9611158565b600354600160a060020a0316331461100057600080fd5b6000868152600260208190526040909120015468010000000000000000900467ffffffffffffffff16421161103457600080fd5b600160a060020a0382168152602081018690524267ffffffffffffffff8181166040840181905291850116606083018190521161107057600080fd5b6080810185815260a0820185815260008881526002602081815260408084208751815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0391821617825592880151600182015581880151938101805460608a015167ffffffffffffffff1990911667ffffffffffffffff968716176fffffffffffffffff000000000000000019166801000000000000000096909116959095029490941790935594516003830155925160049091015591519084169188917f16da476d7265fc95576888b93de4fa4849d6cea1228235887f569c6530ddfec19190a3505050505050565b6040805160c081018252600080825260208201819052918101829052606081018290526080810182905260a0810191909152905600a165627a7a72305820cd9cd1f1efe21c8d56148d7596abb68e0715339826405dfa99357038154bc9bf0029`
+const CozyBin = `0x608060405261927c60055534801561001657600080fd5b506040516040806112d28339810160405280516020909101516000805433600160a060020a0319918216811783556001805483169091179055600380548216600160a060020a03958616179055600480549091169390921692909217905561124e90819061008490396000f3006080604052600436106100fb5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630117200581146101005780631887a4d0146101315780631c31f710146101465780632d4a170a1461016957806338af3eed14610193578063571a26a0146101a85780636a1db1bf1461020a578063715018a61461022257806374a25d431461023757806378d6ade4146102625780638da5cb5b14610277578063a6da467c1461028c578063a8f5c673146102b1578063d024cd02146102c9578063d3ce71df14610300578063db8d55f11461031f578063ddca3f4314610334578063f2fde38b14610349575b600080fd5b34801561010c57600080fd5b5061011561036a565b60408051600160a060020a039092168252519081900360200190f35b34801561013d57600080fd5b50610115610379565b34801561015257600080fd5b50610167600160a060020a0360043516610388565b005b34801561017557600080fd5b506101816004356103ce565b60408051918252519081900360200190f35b34801561019f57600080fd5b50610115610473565b3480156101b457600080fd5b506101c0600435610482565b60408051600160a060020a039097168752602087019590955267ffffffffffffffff93841686860152919092166060850152608084019190915260a0830152519081900360c00190f35b34801561021657600080fd5b506101676004356104d5565b34801561022e57600080fd5b506101676104ff565b34801561024357600080fd5b5061016760043560243560443567ffffffffffffffff6064351661056b565b34801561026e57600080fd5b50610181610624565b34801561028357600080fd5b5061011561062b565b6101676004356024356044351515600160a060020a036064358116906084351661063a565b3480156102bd57600080fd5b506101676004356106d8565b3480156102d557600080fd5b5061016760043560243560443567ffffffffffffffff60643516600160a060020a036084351661085a565b6101676004356024356044351515600160a060020a036064351661090e565b34801561032b57600080fd5b50610167610d96565b34801561034057600080fd5b50610181610dd3565b34801561035557600080fd5b50610167600160a060020a0360043516610dd9565b600454600160a060020a031681565b600354600160a060020a031681565b600054600160a060020a0316331461039f57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600081815260026020819052604082209081015467ffffffffffffffff8082164290810392859283928392839268010000000000000000909104161161041a5785600401549650610468565b600386015460048701546002880154919003945067ffffffffffffffff80821668010000000000000000909204160392508285850281151561045857fe5b0591508186600301540190508096505b505050505050919050565b600154600160a060020a031681565b600260208190526000918252604090912080546001820154928201546003830154600490930154600160a060020a03909216939267ffffffffffffffff8083169368010000000000000000909304169186565b600054600160a060020a031633146104ec57600080fd5b60055481106104fa57600080fd5b600555565b600054600160a060020a0316331461051657600080fd5b60008054604051600160a060020a03909116917ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482091a26000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600354604080517f62bc63c40000000000000000000000000000000000000000000000000000000081526004810187905290514292600160a060020a0316916362bc63c49160248083019260209291908290030181600087803b1580156105d157600080fd5b505af11580156105e5573d6000803e3d6000fd5b505050506040513d60208110156105fb57600080fd5b505167ffffffffffffffff16111561061257600080fd5b61061e84848484610df9565b50505050565b620f424081565b600054600160a060020a031681565b60048054604080517f7352e4b8000000000000000000000000000000000000000000000000000000008152600160a060020a0386811694820194909452848416602482015290519290911691637352e4b89160448082019260009290919082900301818387803b1580156106ad57600080fd5b505af11580156106c1573d6000803e3d6000fd5b505050506106d18585858561090e565b5050505050565b60008181526002602081905260409091200154426801000000000000000090910467ffffffffffffffff161061070d57600080fd5b60035460008281526002602090815260408083205481517fa9059cbb000000000000000000000000000000000000000000000000000000008152600160a060020a03918216600482015260248101879052915194169363a9059cbb93604480840194938390030190829087803b15801561078657600080fd5b505af115801561079a573d6000803e3d6000fd5b505050506040513d60208110156107b057600080fd5b505115156107bd57600080fd5b600081815260026020526040808220549051600160a060020a039091169183917f95b73f79c6d7b09d4dd9a323589aec50a424621f53a70ece1cc21aa75554b5199190a360009081526002602081905260408220805473ffffffffffffffffffffffffffffffffffffffff191681556001810183905590810180546fffffffffffffffffffffffffffffffff191690556003810182905560040155565b600354604080517f62bc63c40000000000000000000000000000000000000000000000000000000081526004810188905290514292600160a060020a0316916362bc63c49160248083019260209291908290030181600087803b1580156108c057600080fd5b505af11580156108d4573d6000803e3d6000fd5b505050506040513d60208110156108ea57600080fd5b505167ffffffffffffffff16111561090157600080fd5b6106d18585858585610ff9565b600354600090819081908190600160a060020a0316331461092e57600080fd5b60008881526002602081905260409091209081015490945068010000000000000000900467ffffffffffffffff16421061096757600080fd5b610970886103ce565b92503483111561097f57600080fd5b600554620f42409084028554604051929091049350600160a060020a03169083850380156108fc02916000818181858888f193505050501580156109c7573d6000803e3d6000fd5b5060048054604080517f873abd75000000000000000000000000000000000000000000000000000000008152600160a060020a03898116948201949094529051929091169163873abd75916024808201926020929091908290030181600087803b158015610a3457600080fd5b505af1158015610a48573d6000803e3d6000fd5b505050506040513d6020811015610a5e57600080fd5b50519050600160a060020a03811615801590610a9d5750604051600160a060020a038216906002840480156108fc02916000818181858888f193505050505b508515610b5b576003546001850154604080517fc29338cf0000000000000000000000000000000000000000000000000000000081526004810192909252602482018a9052600160a060020a038881166044840152905192169163c29338cf916064808201926020929091908290030181600087803b158015610b1f57600080fd5b505af1158015610b33573d6000803e3d6000fd5b505050506040513d6020811015610b4957600080fd5b50511515610b5657600080fd5b610c0d565b6003546001850154604080517fc29338cf000000000000000000000000000000000000000000000000000000008152600481018b90526024810192909252600160a060020a038881166044840152905192169163c29338cf916064808201926020929091908290030181600087803b158015610bd657600080fd5b505af1158015610bea573d6000803e3d6000fd5b505050506040513d6020811015610c0057600080fd5b50511515610c0d57600080fd5b6003548454604080517fa9059cbb000000000000000000000000000000000000000000000000000000008152600160a060020a039283166004820152602481018c90529051919092169163a9059cbb9160448083019260209291908290030181600087803b158015610c7e57600080fd5b505af1158015610c92573d6000803e3d6000fd5b505050506040513d6020811015610ca857600080fd5b50511515610cb557600080fd5b82341115610cf757604051600160a060020a038616903485900380156108fc02916000818181858888f19350505050158015610cf5573d6000803e3d6000fd5b505b8354604051600160a060020a03918216918716908a907f94ffdfa810a5f08da0ec8ea0f74619814453cfc101a90504a3a8f77e0eb6198690600090a4505050600094855250506002602081905260408420805473ffffffffffffffffffffffffffffffffffffffff191681556001810185905590810180546fffffffffffffffffffffffffffffffff1916905560038101849055600401929092555050565b600154604051600160a060020a0390911690303180156108fc02916000818181858888f19350505050158015610dd0573d6000803e3d6000fd5b50565b60055481565b600054600160a060020a03163314610df057600080fd5b610dd081611170565b610e016111ed565b600354604080517f23b872dd000000000000000000000000000000000000000000000000000000008152336004820152306024820152604481018890529051600160a060020a03909216916323b872dd916064808201926020929091908290030181600087803b158015610e7457600080fd5b505af1158015610e88573d6000803e3d6000fd5b505050506040513d6020811015610e9e57600080fd5b50511515610eab57600080fd5b6000858152600260208190526040909120015468010000000000000000900467ffffffffffffffff164211610edf57600080fd5b338152602081018590524267ffffffffffffffff81811660408401819052918401166060830181905211610f1257600080fd5b6080810184815260a0820184815260008781526002602081815260408084208751815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03909116178155918701516001830155808701519282018054606089015167ffffffffffffffff1990911667ffffffffffffffff958616176fffffffffffffffff000000000000000019166801000000000000000095909116949094029390931790925593516003850155915160049093019290925551339187917f16da476d7265fc95576888b93de4fa4849d6cea1228235887f569c6530ddfec19190a35050505050565b6110016111ed565b600354600160a060020a0316331461101857600080fd5b6000868152600260208190526040909120015468010000000000000000900467ffffffffffffffff16421161104c57600080fd5b600160a060020a0382168152602081018690524267ffffffffffffffff8181166040840181905291850116606083018190521161108857600080fd5b6080810185815260a0820185815260008881526002602081815260408084208751815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0391821617825592880151600182015581880151938101805460608a015167ffffffffffffffff1990911667ffffffffffffffff968716176fffffffffffffffff000000000000000019166801000000000000000096909116959095029490941790935594516003830155925160049091015591519084169188917f16da476d7265fc95576888b93de4fa4849d6cea1228235887f569c6530ddfec19190a3505050505050565b600160a060020a038116151561118557600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b6040805160c081018252600080825260208201819052918101829052606081018290526080810182905260a0810191909152905600a165627a7a723058200ab6d823b80046fd29d168a16d30f2769706fea78bf2768755a369395c3f0a750029`
 
 // DeployCozy deploys a new Ethereum contract, binding an instance of Cozy to it.
 func DeployCozy(auth *bind.TransactOpts, backend bind.ContractBackend, _pepeContract common.Address, _affiliateContract common.Address) (common.Address, *types.Transaction, *Cozy, error) {
@@ -494,6 +494,27 @@ func (_Cozy *CozyTransactorSession) GetFees() (*types.Transaction, error) {
 	return _Cozy.Contract.GetFees(&_Cozy.TransactOpts)
 }
 
+// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+//
+// Solidity: function renounceOwnership() returns()
+func (_Cozy *CozyTransactor) RenounceOwnership(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Cozy.contract.Transact(opts, "renounceOwnership")
+}
+
+// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+//
+// Solidity: function renounceOwnership() returns()
+func (_Cozy *CozySession) RenounceOwnership() (*types.Transaction, error) {
+	return _Cozy.Contract.RenounceOwnership(&_Cozy.TransactOpts)
+}
+
+// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+//
+// Solidity: function renounceOwnership() returns()
+func (_Cozy *CozyTransactorSession) RenounceOwnership() (*types.Transaction, error) {
+	return _Cozy.Contract.RenounceOwnership(&_Cozy.TransactOpts)
+}
+
 // SavePepe is a paid mutator transaction binding the contract method 0xa8f5c673.
 //
 // Solidity: function savePepe(_pepeId uint256) returns()
@@ -580,23 +601,23 @@ func (_Cozy *CozyTransactorSession) StartAuctionDirect(_pepeId *big.Int, _beginP
 
 // TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
 //
-// Solidity: function transferOwnership(newOwner address) returns()
-func (_Cozy *CozyTransactor) TransferOwnership(opts *bind.TransactOpts, newOwner common.Address) (*types.Transaction, error) {
-	return _Cozy.contract.Transact(opts, "transferOwnership", newOwner)
+// Solidity: function transferOwnership(_newOwner address) returns()
+func (_Cozy *CozyTransactor) TransferOwnership(opts *bind.TransactOpts, _newOwner common.Address) (*types.Transaction, error) {
+	return _Cozy.contract.Transact(opts, "transferOwnership", _newOwner)
 }
 
 // TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
 //
-// Solidity: function transferOwnership(newOwner address) returns()
-func (_Cozy *CozySession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
-	return _Cozy.Contract.TransferOwnership(&_Cozy.TransactOpts, newOwner)
+// Solidity: function transferOwnership(_newOwner address) returns()
+func (_Cozy *CozySession) TransferOwnership(_newOwner common.Address) (*types.Transaction, error) {
+	return _Cozy.Contract.TransferOwnership(&_Cozy.TransactOpts, _newOwner)
 }
 
 // TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
 //
-// Solidity: function transferOwnership(newOwner address) returns()
-func (_Cozy *CozyTransactorSession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
-	return _Cozy.Contract.TransferOwnership(&_Cozy.TransactOpts, newOwner)
+// Solidity: function transferOwnership(_newOwner address) returns()
+func (_Cozy *CozyTransactorSession) TransferOwnership(_newOwner common.Address) (*types.Transaction, error) {
+	return _Cozy.Contract.TransferOwnership(&_Cozy.TransactOpts, _newOwner)
 }
 
 // CozyAuctionFinalizedIterator is returned from FilterAuctionFinalized and is used to iterate over the raw logs and unpacked data for AuctionFinalized events raised by the Cozy contract.
@@ -1011,6 +1032,138 @@ func (_Cozy *CozyFilterer) WatchAuctionWon(opts *bind.WatchOpts, sink chan<- *Co
 				// New log arrived, parse the event and forward to the user
 				event := new(CozyAuctionWon)
 				if err := _Cozy.contract.UnpackLog(event, "AuctionWon", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// CozyOwnershipRenouncedIterator is returned from FilterOwnershipRenounced and is used to iterate over the raw logs and unpacked data for OwnershipRenounced events raised by the Cozy contract.
+type CozyOwnershipRenouncedIterator struct {
+	Event *CozyOwnershipRenounced // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *CozyOwnershipRenouncedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(CozyOwnershipRenounced)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(CozyOwnershipRenounced)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *CozyOwnershipRenouncedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *CozyOwnershipRenouncedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// CozyOwnershipRenounced represents a OwnershipRenounced event raised by the Cozy contract.
+type CozyOwnershipRenounced struct {
+	PreviousOwner common.Address
+	Raw           types.Log // Blockchain specific contextual infos
+}
+
+// FilterOwnershipRenounced is a free log retrieval operation binding the contract event 0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820.
+//
+// Solidity: e OwnershipRenounced(previousOwner indexed address)
+func (_Cozy *CozyFilterer) FilterOwnershipRenounced(opts *bind.FilterOpts, previousOwner []common.Address) (*CozyOwnershipRenouncedIterator, error) {
+
+	var previousOwnerRule []interface{}
+	for _, previousOwnerItem := range previousOwner {
+		previousOwnerRule = append(previousOwnerRule, previousOwnerItem)
+	}
+
+	logs, sub, err := _Cozy.contract.FilterLogs(opts, "OwnershipRenounced", previousOwnerRule)
+	if err != nil {
+		return nil, err
+	}
+	return &CozyOwnershipRenouncedIterator{contract: _Cozy.contract, event: "OwnershipRenounced", logs: logs, sub: sub}, nil
+}
+
+// WatchOwnershipRenounced is a free log subscription operation binding the contract event 0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820.
+//
+// Solidity: e OwnershipRenounced(previousOwner indexed address)
+func (_Cozy *CozyFilterer) WatchOwnershipRenounced(opts *bind.WatchOpts, sink chan<- *CozyOwnershipRenounced, previousOwner []common.Address) (event.Subscription, error) {
+
+	var previousOwnerRule []interface{}
+	for _, previousOwnerItem := range previousOwner {
+		previousOwnerRule = append(previousOwnerRule, previousOwnerItem)
+	}
+
+	logs, sub, err := _Cozy.contract.WatchLogs(opts, "OwnershipRenounced", previousOwnerRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(CozyOwnershipRenounced)
+				if err := _Cozy.contract.UnpackLog(event, "OwnershipRenounced", log); err != nil {
 					return err
 				}
 				event.Raw = log
