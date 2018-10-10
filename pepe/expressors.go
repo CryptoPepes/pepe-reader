@@ -128,7 +128,8 @@ var hairData = ExpressorData{
     bit12Expr.Expression("hair>hat", 0.87, 0.9, false),
     bit12Expr.Expression("hair>samurai", 0.9, 0.91, false),
     bit12Expr.Expression("hair>sombrero_hat", 0.91, 0.94, false),
-    bit12Expr.Expression("hair>modern_hair", 0.94, 1.0, false),
+    bit12Expr.Expression("hair>modern_hair", 0.94, 0.985, false),
+    bit12Expr.Expression("hair>vitalik_hair", 0.985, 1.0, false),
   },
 }
 
@@ -258,7 +259,8 @@ var shirtData = ExpressorData{
     bit8Expr.Expression("shirt>mexican_poncho", 0.5, 0.55, false),
     bit8Expr.Expression("shirt>pepemon", 0.55, 0.58, false),
     bit8Expr.Expression("shirt>dracula", 0.58, 0.61, false),
-    bit8Expr.Expression("shirt>basic_shirt", 0.61, 0.75, false),
+    bit8Expr.Expression("shirt>vitalik_shirt", 0.61, 0.64, false),
+    bit8Expr.Expression("shirt>basic_shirt", 0.64, 0.75, false),
     bit8Expr.Expression("shirt>darth_pepe", 0.75, 0.755, false),
     bit8Expr.Expression("shirt>camp_shirt", 0.755, 0.86, false),
     bit8Expr.Expression("shirt>kim_jong_un_shirt", 0.86, 0.9, false),

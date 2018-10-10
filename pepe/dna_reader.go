@@ -173,6 +173,12 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 			pepeLook.Head.Mouth = "mouth>basic_lips"
 		}
 	}//
+	if pepeLook.Body.Shirt.ShirtType == "shirt>vitalik_shirt" {
+		// Vitalik shirt already has hands
+		if pepeLook.Head.Mouth == "mouth>drink_wine" || pepeLook.Head.Mouth == "mouth>drink_coffee" {
+			pepeLook.Head.Mouth = "mouth>basic_lips"
+		}
+	}
 	if pepeLook.Body.Shirt.ShirtType == "shirt>pepemon" {
 		pepeLook.Head.Hair.HairType = "none"
 		pepeLook.Body.Neck = "none"
