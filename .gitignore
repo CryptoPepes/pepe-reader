@@ -7,3 +7,4 @@ dastore-emu/WEB-INF/appengine-generated/
 # Looking to just read the datastore as an outside user? Try the API!
 # It offers search + pagination to read whatever you may need.
 datastore-key.json
+datastore-key-main.json

@@ -179,12 +179,12 @@ To setup testnode in full-sync mode
 # Do not forget to set up a swap file (See instructions in Deploy section)
 
 # Create testnode app
-dokku apps:create testnode
+dokku apps:create mainnode
 
 # Disable proxy, it's not a webserver, just use the direct ports (Also, proxy is only for http(s))
-dokku proxy:disable testnode
+dokku proxy:disable mainnode
 # Enable the dokku app to bind to external interfaces
-dokku network:set testnode bind-all-interfaces true
+dokku network:set mainnode bind-all-interfaces true
 # RPC over http/ws is not on by default, as it should be, so no need to do anything for those ports.
 
 # Make volume
@@ -192,10 +192,9 @@ mkdir /mnt/my-storage/ethereum
 # note: -o specifies volume-driver options (key=value)
 docker volume create -d local -o type=none -o o=bind -o device=/mnt/my-storage/ethereum ethereum
 # configure persistent shared volume for chaindata
-dokku docker-options:add testnode deploy,run "-v ethereum:/root/.ethereum"
+dokku docker-options:add mainnode deploy,run "-v ethereum:/root/.ethereum"
 # Configure the testnode
-# Also, add a bunch of enodes from the EF, and some other random nodes.
-dokku config:set testnode DOKKU_DOCKERFILE_START_CMD="--testnet --syncmode=fast --cache=512 --bootnodes enode://30b7ab30a01c124a6cceca36863ece12c4f5fa68e3ba9b0b51407ccc002eeed3b3102d20a88f1c1d3c3154e2449317b8ef95090e77b312d5cc39354f86d5d606@52.176.7.10:30303,enode://6332792c4a00e3e4ee0926ed89e0d27ef985424d97b6a45bf0f23e51f0dcb5e66b875777506458aea7af6f9e4ffb69f43f3778ee73c81ed9d34c51c4b16b0b0f@52.232.243.152:30303,enode://865a63255b3bb68023b6bffd5095118fcc13e79dcf014fe4e47e065c350c7cc72af2e53eff895f11ba1bbb6a2b33271c1116ee870f266618eadfc2e78aa7349c@52.176.100.77:30303,enode://94c15d1b9e2fe7ce56e458b9a3b672ef11894ddedd0c6f247e0f1d3487f52b66208fb4aeb8179fce6e3a749ea93ed147c37976d67af557508d199d9594c35f09@192.81.208.223:30303"
+dokku config:set --no-restart mainnode DOKKU_DOCKERFILE_START_CMD="--syncmode=fast --cache=3000"
 ```
 
 ### Deploy from local to remote:
