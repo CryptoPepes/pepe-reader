@@ -51,6 +51,10 @@ func main() {
 		"0x1234abcd1234abcd1234abcd1234abcd1234abcd",
 		"Cozy time auction token address.")
 
+	contractBaseBlock := flag.Uint64("contract-base-block",
+		6482000,
+		"The minimum block, backfills are only done starting from here.")
+
 	backfillMode := flag.Bool("backfills",
 		true,
 		"If backfills should be ran (on schedule)")
@@ -71,8 +75,9 @@ func main() {
 		token address: %s
 		saleAuctionAddress: %s
 		cozyAuctionAddress: %s
+		contract base block number: %d
 `,
-		*gethSimMode, *trufflePath, *networkId, *rpcAddress, *tokenAddress, *saleAuctionAddress, *cozyAuctionAddress)
+		*gethSimMode, *trufflePath, *networkId, *rpcAddress, *tokenAddress, *saleAuctionAddress, *cozyAuctionAddress, *contractBaseBlock)
 
 
 	var rawPepeToken *token.Token
@@ -119,7 +124,7 @@ func main() {
 
 	dc := datastoring.NewDataStoreClient()
 
-	worker := datastoring.NewPepeDataWorker(r, dc)
+	worker := datastoring.NewPepeDataWorker(r, dc, *contractBaseBlock)
 	worker.StartSchedule(*backfillMode)
 
 	//TODO add dynamic input thing to close worker with? (worker.Close())

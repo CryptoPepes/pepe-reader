@@ -69,17 +69,21 @@ dokku apps:create reader
 # dokku docker-options:add reader deploy,run "-v ethereum:/root/.ethereum"
 
 # Configure start
+
+# ropsten testnet
 # Light-mode:
 dokku config:set reader DOKKU_DOCKERFILE_START_CMD="--rpc=wss://ropsten.infura.io/ws \
 --token-address=0x966383a597372cd2dea4d247a69db5a1fce8d3da \
 --sale-auction-address=0xb1a4c9e7c5fb6866c1103a239f3cd333d36276d2 \
 --cozy-auction-address=0x8fd285424995dd2adace2a3d0acb550717690367 \
+--contract-base-block=4169600 \
 --backfills=false"
 # Full/backfill mode:
 dokku config:set --no-restart reader DOKKU_DOCKERFILE_START_CMD="--rpc=/root/.ethereum/testnet/geth.ipc \
 --token-address=0x966383a597372cd2dea4d247a69db5a1fce8d3da \
 --sale-auction-address=0xb1a4c9e7c5fb6866c1103a239f3cd333d36276d2 \
 --cozy-auction-address=0x8fd285424995dd2adace2a3d0acb550717690367 \
+--contract-base-block=4169600 \
 --backfills=true"
 
 # main net

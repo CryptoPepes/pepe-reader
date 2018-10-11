@@ -37,9 +37,11 @@ type Worker struct {
 	sched scheduler.Scheduler
 
 	backfillTasks chan BackfillTask
+
+	contractBaseBlock uint64
 }
 
-func NewPepeDataWorker(r reader.Reader, dc *datastore.Client) *Worker {
+func NewPepeDataWorker(r reader.Reader, dc *datastore.Client, contractBaseBlock uint64) *Worker {
 
 	worker := new(Worker)
 	worker.reader = r
@@ -58,6 +60,8 @@ func NewPepeDataWorker(r reader.Reader, dc *datastore.Client) *Worker {
 	worker.entityBuf = data.NewEntityBuffer(dc)
 
 	worker.backfillTasks = make(chan BackfillTask, 10)
+
+	worker.contractBaseBlock = contractBaseBlock
 
 	return worker
 }
@@ -122,8 +126,6 @@ func (worker *Worker) StartSchedule(runBackfills bool) {
 	worker.sched.Wait()
 }
 
-const contractBaseBlock uint64 = 6482000
-
 func (worker *Worker) runBackfillSchedule() {
 
 	// Backfill util
@@ -150,7 +152,7 @@ func (worker *Worker) runBackfillSchedule() {
 		// 0 is special case, full backfill.
 		if blocks == 0 {
 			// Contract created in contractBaseBlock, no interest in blocks before that.
-			blocks = currentBlock - contractBaseBlock
+			blocks = currentBlock - worker.contractBaseBlock
 		}
 
 		startPoint := currentBlock - blocks
