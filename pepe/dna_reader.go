@@ -100,6 +100,7 @@ var mouthsWithHands = []string{
 	"mouth>drink_wine",
 	"mouth>drink_coffee",
 	"mouth>smug_lips",
+	"mouth>smug_mustache",
 }
 
 func isSimpleEyes(id string) bool {
@@ -180,6 +181,12 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 	if pepeLook.Head.Eyes.EyeType == "eyes>monkas_eye" {
 		// monkaS has sweat as "hair/hat"
 		pepeLook.Head.Hair.HairType = "none"
+	}
+	// woke eyes do not fit with upwards caps
+	if pepeLook.Head.Hair.HairType == "hair>bitcoin_cap" || pepeLook.Head.Hair.HairType == "hair>thug_life_cap" {
+		if pepeLook.Head.Eyes.EyeType == "eyes>woke_eyes" {
+			pepeLook.Head.Eyes.EyeType = "eyes>colored_eyes"
+		}
 	}
 	if pepeLook.Head.Hair.HairType == "hair>chaplin" ||
 		pepeLook.Head.Hair.HairType == "hair>bun_beard" ||
