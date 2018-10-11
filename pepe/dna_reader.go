@@ -96,6 +96,12 @@ var simpleMouths = []string{
 	"mouth>young_lips",
 }
 
+var mouthsWithHands = []string{
+	"mouth>drink_wine",
+	"mouth>drink_coffee",
+	"mouth>smug_lips",
+}
+
 func isSimpleEyes(id string) bool {
 	for _, eye := range simpleEyes {
 		if eye == id {
@@ -107,6 +113,15 @@ func isSimpleEyes(id string) bool {
 
 func isSimpleMouth(id string) bool {
 	for _, mouth := range simpleMouths {
+		if mouth == id {
+			return true
+		}
+	}
+	return false
+}
+
+func isMouthWithHands(id string) bool {
+	for _, mouth := range mouthsWithHands {
 		if mouth == id {
 			return true
 		}
@@ -174,8 +189,8 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 		}
 	}//
 	if pepeLook.Body.Shirt.ShirtType == "shirt>vitalik_shirt" {
-		// Vitalik shirt already has hands
-		if pepeLook.Head.Mouth == "mouth>drink_wine" || pepeLook.Head.Mouth == "mouth>drink_coffee" {
+		// Vitalik shirt already has hands *vitalik clap*
+		if isMouthWithHands(pepeLook.Head.Mouth) {
 			pepeLook.Head.Mouth = "mouth>basic_lips"
 		}
 	}
