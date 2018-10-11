@@ -102,7 +102,7 @@ dokku config:set reader APP_PATH="/app/"
 
 dokku docker-options:add reader build "--build-arg GOOGLE_DATASTORE_KEY=.............."
 # Replace .............. with the long base64 encoded keyfile, obtained and added to your clipboard by running this locally:
-base64 datastore-key-XXXXXXX.json | xsel -pi
+base64 datastore-key-XXXXXXX.json | tr -d '\n' | xsel -pi
 
 # back to local machine
 > exit
