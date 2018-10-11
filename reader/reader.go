@@ -10,6 +10,11 @@ import (
 	"cryptopepe.io/cryptopepe-reader/chainutil"
 	"cryptopepe.io/cryptopepe-reader/abi/sale"
 	"cryptopepe.io/cryptopepe-reader/abi/cozy"
+	"net/http"
+	"time"
+	"io/ioutil"
+	"encoding/json"
+	"strconv"
 )
 
 type Reader interface {
@@ -35,6 +40,7 @@ type ChainReader struct {
 	saleAuctionCallSession *sale.SaleCallerSession
 	cozyAuctionCallSession *cozy.CozyCallerSession
 
+	httpCl http.Client
 }
 
 func NewChainReader(rawPepeToken *token.Token,
@@ -73,6 +79,10 @@ func NewChainReader(rawPepeToken *token.Token,
 		},
 	}
 
+	reader.httpCl = http.Client{
+		Timeout: time.Second * 2, // Maximum of 2 secs
+	}
+
 	return reader
 }
 
@@ -85,8 +95,47 @@ func (reader *ChainReader) Test() {
 	fmt.Println("Token name:", name)
 }
 
+type etherscanBlockNumApiResponse struct {
+	BlockNumHex string `json:"result"`
+}
+
+var blockApiUrl = "https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=QV69RVEK45DAMX268Y7FC9GYQ5I87GEFFK"
+
 func (reader *ChainReader) GetCurrentBlock() (uint64, error) {
-	return reader.chainInfo.GetCurrentBlock()
+	gethBlockNum, err := reader.chainInfo.GetCurrentBlock()
+	if err != nil {
+		fmt.Printf("Could not retrieve block number from geth, result: %d\n", gethBlockNum)
+		fmt.Println(err)
+	} else if gethBlockNum != 0 {
+		return gethBlockNum, nil
+	}
+
+	req, err := http.NewRequest(http.MethodGet, blockApiUrl, nil)
+	if err != nil {
+		return 0, err
+	}
+
+	req.Header.Set("User-Agent", "spacecount-tutorial")
+
+	res, getErr := reader.httpCl.Do(req)
+	if getErr != nil {
+		return 0, getErr
+	}
+
+	body, readErr := ioutil.ReadAll(res.Body)
+	if readErr != nil {
+		return 0, readErr
+	}
+
+	resp := etherscanBlockNumApiResponse{}
+	jsonErr := json.Unmarshal(body, &resp)
+	if jsonErr != nil {
+		return 0, jsonErr
+	}
+
+	blockNum, parseErr := strconv.ParseInt(resp.BlockNumHex, 0, 64)
+	return uint64(blockNum), parseErr
+
 }
 
 func (reader *ChainReader) GetPepeEventFilterer() (*token.TokenFilterer) {

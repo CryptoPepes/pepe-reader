@@ -82,6 +82,19 @@ dokku config:set --no-restart reader DOKKU_DOCKERFILE_START_CMD="--rpc=/root/.et
 --cozy-auction-address=0x8fd285424995dd2adace2a3d0acb550717690367 \
 --backfills=true"
 
+# main net
+dokku config:set reader DOKKU_DOCKERFILE_START_CMD="--rpc=wss://ropsten.infura.io/ws \
+--token-address=0x84ac94f17622241f313511b629e5e98f489ad6e4 \
+--sale-auction-address=0x28ae3df366726d248c57b19fa36f6d9c228248be \
+--cozy-auction-address=0xe2c43d2c6d6875c8f24855054d77b5664c7e810f \
+--backfills=false"
+# Full/backfill mode:
+dokku config:set --no-restart reader DOKKU_DOCKERFILE_START_CMD="--rpc=/root/.ethereum/geth.ipc \
+--token-address=0x84ac94f17622241f313511b629e5e98f489ad6e4 \
+--sale-auction-address=0x28ae3df366726d248c57b19fa36f6d9c228248be \
+--cozy-auction-address=0xe2c43d2c6d6875c8f24855054d77b5664c7e810f \
+--backfills=true"
+
 dokku config:set reader GOOGLE_APPLICATION_CREDENTIALS="datastore-key.json"
 dokku config:set reader DATASTORE_PROJECT_ID="cryptopepe-192921"
 dokku config:set reader APP_PATH="/app/"
@@ -91,6 +104,8 @@ dokku config:set reader APP_PATH="/app/"
 
 # Go to reader project dir
 git remote add ocean-reader dokku@188.166.127.9:reader
+git remote add ocean-reader dokku@188.166.115.121:reader
+
 # Deploy
 git push ocean-reader master
 ```
@@ -146,7 +161,7 @@ Export `GOOGLE_APPLICATION_CREDENTIALS=datastore-key.json` to access the Google 
 Creating indexes from the `index.yml`:
 
 ```bash
-CLOUDSDK_CORE_PROJECT=cryptopepe-192921 GOOGLE_APPLICATION_CREDENTIALS=./datastore-key.json gcloud datastore create-indexes datastore-emu/WEB-INF/index.yaml
+CLOUDSDK_CORE_PROJECT=cryptopepe-main GOOGLE_APPLICATION_CREDENTIALS=./datastore-key.json gcloud datastore create-indexes datastore-emu/WEB-INF/index.yaml
 ```
 
 
@@ -194,7 +209,7 @@ docker volume create -d local -o type=none -o o=bind -o device=/mnt/my-storage/e
 # configure persistent shared volume for chaindata
 dokku docker-options:add mainnode deploy,run "-v ethereum:/root/.ethereum"
 # Configure the testnode
-dokku config:set --no-restart mainnode DOKKU_DOCKERFILE_START_CMD="--syncmode=fast --cache=3000"
+dokku config:set --no-restart mainnode DOKKU_DOCKERFILE_START_CMD="--syncmode=fast --cache=6000"
 ```
 
 ### Deploy from local to remote:

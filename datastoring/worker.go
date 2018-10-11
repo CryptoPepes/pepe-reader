@@ -122,15 +122,15 @@ func (worker *Worker) StartSchedule(runBackfills bool) {
 	worker.sched.Wait()
 }
 
-const contractBaseBlock uint64 = 3327940
+const contractBaseBlock uint64 = 6482000
 
 func (worker *Worker) runBackfillSchedule() {
 
 	// Backfill util
 	//-------------------------------------------------------------------------
 
-	//backfill in windows of at most 15000 blocks (~60 hours)
-	backfillWindowSize := uint64(15000)
+	//backfill in windows of at most 400 blocks
+	backfillWindowSize := uint64(400)
 
 	runBackFillWindow := func(blocks uint64) {
 		var err error
@@ -142,9 +142,14 @@ func (worker *Worker) runBackfillSchedule() {
 			return
 		}
 
+		if currentBlock == 0 {
+			// TODO better fallback in case of blocknum status failure (when in-sync)
+			currentBlock = 6500000
+		}
+
 		// 0 is special case, full backfill.
 		if blocks == 0 {
-			// Contract created in block 3327965
+			// Contract created in contractBaseBlock, no interest in blocks before that.
 			blocks = currentBlock - contractBaseBlock
 		}
 

@@ -13,6 +13,7 @@
     {{ CallTemplate .Body.Neck . "back" }}
 
     {{ CallTemplate "general>head" . "back" }}
+    {{ CallTemplate "general>head" . "front" }}
 
     {{ CallTemplate .Head.Eyes.EyeType . "back" }}
 
@@ -21,7 +22,6 @@
     {{ CallTemplate .Extra.Glasses.GlassesType . "back" }}
 
 
-    {{ CallTemplate "general>head" . "front" }}
 
     {{ CallTemplate .Head.Eyes.EyeType . "front" }}
 
