@@ -6,5 +6,4 @@ dastore-emu/WEB-INF/appengine-generated/
 # Private key to read/write datastore.
 # Looking to just read the datastore as an outside user? Try the API!
 # It offers search + pagination to read whatever you may need.
-#datastore-key.json
-datastore-key-main.json
+datastore-key-**.json

@@ -9,6 +9,11 @@ RUN cd /cryptopepe-reader && build/env.sh go build -v -o build/cryptopepe-reader
 # Pull Geth into a second stage deploy alpine container
 FROM alpine:latest
 
+# Define that we want this docker build argument
+ARG GOOGLE_DATASTORE_KEY
+# Retrieve the build argument, insert it into the environment
+ENV GOOGLE_DATASTORE_KEY=$GOOGLE_DATASTORE_KEY
+
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /cryptopepe-reader/build/cryptopepe-reader /usr/local/bin/
 
@@ -19,8 +24,8 @@ COPY --from=builder /cryptopepe-reader/vendor/cryptopepe.io/cryptopepe-svg/build
 # Copy bio builder file
 COPY --from=builder /cryptopepe-reader/bio-gen/bio_config.yml /app/bio_config.yml
 
-# Copy credentials file
-COPY --from=builder /cryptopepe-reader/datastore-key.json /app/datastore-key.json
+# Write credentials file (read from env, decode, tee into file)
+RUN echo -n "$GOOGLE_DATASTORE_KEY" | base64 -d | tee /app/datastore-key.json
 
 WORKDIR /app
 ENTRYPOINT ["cryptopepe-reader"]
