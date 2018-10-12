@@ -137,6 +137,7 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 		pepeLook.Head.Hair.HairType = "none"
 		pepeLook.Body.Shirt.ShirtType = "none"
 		pepeLook.Head.Mouth = "none"
+		pepeLook.Body.Neck = "none"
 	}
 	if pepeLook.Body.Shirt.ShirtType == "shirt>darth_pepe" {
 		pepeLook.Extra.Glasses.GlassesType = "none"
@@ -223,5 +224,9 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 		pepeLook.Head.Hair.HairType == "hair>samurai"{
 		pepeLook.Extra.Glasses.GlassesType = "none"
 		pepeLook.Body.Shirt.ShirtType = "none"
+	}
+	if pepeLook.Head.Mouth == "mouth>feels_birthday" {
+		// Feelsbirthday already has a pointy party hat.
+		pepeLook.Head.Hair.HairType = "none"
 	}
 }
