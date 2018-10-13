@@ -214,6 +214,9 @@ func ResolveLookConflicts(pepeLook *look.PepeLook) {
 	}
 	if pepeLook.Head.Mouth == "mouth>feels_birthday" {
 		pepeLook.Head.Hair.HairType = "none"
+		if pepeLook.Extra.Glasses.GlassesType == "glasses>pirate_hat" {
+			pepeLook.Extra.Glasses.GlassesType = "none"
+		}
 	}
 	if pepeLook.Head.Mouth == "mouth>pacman" {
 		pepeLook.Extra.Glasses.GlassesType = "none"
