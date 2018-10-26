@@ -10,7 +10,6 @@ func HandleAll(hub *triggers.TriggerHub, context *event.EventContext) {
 
 	// define all the handlers
 	var presets = map[string]event.EventHandlerPreset{
-		"svg": {Broadcast: hub.Svg, HandleFn: SvgUpdate},
 		"pepe update": {Broadcast: hub.Pepe, HandleFn: PepeUpdate},
 		"user update": {Broadcast: hub.User, HandleFn: UserUpdate},
 	}

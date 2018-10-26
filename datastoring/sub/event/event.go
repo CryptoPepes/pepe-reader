@@ -3,7 +3,6 @@ package event
 import (
 	"cryptopepe.io/cryptopepe-reader/reader"
 	"cryptopepe.io/cryptopepe-reader/datastoring/triggers"
-	"cryptopepe.io/cryptopepe-svg/builder"
 	"cryptopepe.io/cryptopepe-reader/datastoring/data"
 	"cryptopepe.io/cryptopepe-reader/bio-gen"
 )
@@ -37,6 +36,5 @@ func (preset *EventHandlerPreset) Make() *EventHandler {
 type EventContext struct {
 	Reader reader.Reader
 	EntityBuf *data.EntityBuffer
-	SvgBuilder *builder.SVGBuilder
 	BioGenerator *bio_gen.BioGenerator
 }

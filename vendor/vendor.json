@@ -39,23 +39,10 @@
 			"revisionTime": "2018-01-24T22:13:42Z"
 		},
 		{
-			"checksumSHA1": "XOxR4PxRWv1tLG+C6g41B5CCrJo=",
-			"path": "cryptopepe.io/cryptopepe-svg/builder",
-			"revision": "1876ac42fdd4d124b861ab62b52576b55d052681",
-			"revisionTime": "2018-10-13T10:38:52Z"
-		},
-		{
 			"checksumSHA1": "X/ErqHwXWwIAxkLkgkKLR1qY/w0=",
 			"path": "cryptopepe.io/cryptopepe-svg/builder/look",
 			"revision": "1c622a0fe1e9222c1e871115618c2d7c86cb7750",
 			"revisionTime": "2018-09-24T16:02:56Z"
-		},
-		{
-			"checksumSHA1": "24Yr1wLSnIi1aIG6y4bNNmMTE1k=",
-			"path": "cryptopepe.io/cryptopepe-svg/builder/tmpl",
-			"revision": "fa6326bb6d3a9c7a4eb23b6f65df6776cceb0561",
-			"revisionTime": "2018-10-12T13:28:37Z",
-			"tree": true
 		},
 		{
 			"checksumSHA1": "USkefO0g1U9mr+8hagv3fpSkrxg=",
@@ -222,13 +209,6 @@
 			"path": "github.com/ethereum/go-ethereum/crypto/secp256k1",
 			"revision": "05e164a0f7e7d9f991c9d5473629f5e9754564b4",
 			"revisionTime": "2018-01-25T15:24:51Z"
-		},
-		{
-			"checksumSHA1": "QdGvA6BTNjFjj3/j8+N7TO+h5ew=",
-			"path": "github.com/ethereum/go-ethereum/crypto/secp256k1/libsecp256k1",
-			"revision": "05e164a0f7e7d9f991c9d5473629f5e9754564b4",
-			"revisionTime": "2018-01-25T15:24:51Z",
-			"tree": true
 		},
 		{
 			"checksumSHA1": "pQzUVRi0z/3Z4FpRyExSg1ROLSA=",
@@ -559,69 +539,6 @@
 			"path": "github.com/syndtr/goleveldb/leveldb/util",
 			"revision": "05e164a0f7e7d9f991c9d5473629f5e9754564b4",
 			"revisionTime": "2018-01-25T15:24:51Z"
-		},
-		{
-			"checksumSHA1": "OeS7cUI7tvEFhl9MgGbIYYjdjAw=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/minify",
-			"path": "github.com/tdewolff/minify",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "n2y1GbJeYUnC9ILcgMBYhgymxho=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/minify/css",
-			"path": "github.com/tdewolff/minify/css",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "mjqh5Zfz+qaM5G3gdxDUodW3oEw=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/minify/svg",
-			"path": "github.com/tdewolff/minify/svg",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "ytbPF6rJvRmYqFuiU5bWxMjnxJ0=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse",
-			"path": "github.com/tdewolff/parse",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "bFczQeEt4V5STOU9jd9rHxnyAD0=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse/buffer",
-			"path": "github.com/tdewolff/parse/buffer",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "Uh+YXWjy9UiFwu6QqOlbSMHbgXg=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse/css",
-			"path": "github.com/tdewolff/parse/css",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "IrorTJ5lfYWU5QdWqMuLexxzoYA=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse/strconv",
-			"path": "github.com/tdewolff/parse/strconv",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "FetcW0ezJKXbXcsYISUTpt3CNPU=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse/svg",
-			"path": "github.com/tdewolff/parse/svg",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
-		},
-		{
-			"checksumSHA1": "DYTiA9sTLaNHTecu+WyO6YOkN4I=",
-			"origin": "cryptopepe.io/cryptopepe-svg/builder/vendor/github.com/tdewolff/parse/xml",
-			"path": "github.com/tdewolff/parse/xml",
-			"revision": "ad710f2bcc71c0256cb7acf0b0ebde96f65b33a6",
-			"revisionTime": "2018-06-07T22:55:10Z"
 		},
 		{
 			"checksumSHA1": "1MGpGDQqnUoRpv7VEcQrXOBydXE=",

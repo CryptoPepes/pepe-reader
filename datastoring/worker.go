@@ -3,7 +3,6 @@ package datastoring
 import (
 	"cloud.google.com/go/datastore"
 	"cryptopepe.io/cryptopepe-reader/reader"
-	"cryptopepe.io/cryptopepe-svg/builder"
 	"github.com/rakanalh/scheduler"
 	scheduleStorage "github.com/rakanalh/scheduler/storage"
 	"cryptopepe.io/cryptopepe-reader/datastoring/events"
@@ -26,7 +25,6 @@ type Worker struct {
 	reader reader.Reader
 	dc     *datastore.Client
 
-	svgBuilder *builder.SVGBuilder
 	bioGenerator *bio_gen.BioGenerator
 
 	eventHub   *events.EventHub
@@ -46,9 +44,6 @@ func NewPepeDataWorker(r reader.Reader, dc *datastore.Client, contractBaseBlock 
 	worker := new(Worker)
 	worker.reader = r
 	worker.dc = dc
-
-	worker.svgBuilder = new(builder.SVGBuilder)
-	worker.svgBuilder.Load()
 
 	worker.bioGenerator = new (bio_gen.BioGenerator)
 	worker.bioGenerator.Load()
@@ -90,7 +85,6 @@ func (worker *Worker) StartSchedule(runBackfills bool) {
 	evCtx := &event.EventContext{
 		Reader:     worker.reader,
 		EntityBuf:  worker.entityBuf,
-		SvgBuilder: worker.svgBuilder,
 		BioGenerator: worker.bioGenerator,
 	}
 

@@ -17,10 +17,6 @@ ENV GOOGLE_DATASTORE_KEY=$GOOGLE_DATASTORE_KEY
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /cryptopepe-reader/build/cryptopepe-reader /usr/local/bin/
 
-# Copy builder files
-COPY --from=builder /cryptopepe-reader/vendor/cryptopepe.io/cryptopepe-svg/builder/tmpl /app/tmpl
-COPY --from=builder /cryptopepe-reader/vendor/cryptopepe.io/cryptopepe-svg/builder/builder.tmpl /app/builder.tmpl
-
 # Copy bio builder file
 COPY --from=builder /cryptopepe-reader/bio-gen/bio_config.yml /app/bio_config.yml
 

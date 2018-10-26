@@ -78,7 +78,6 @@ func NewTrigger(pepeId *big.Int, address *common.Address, block uint64) *Trigger
 
 type TriggerHub struct {
 	Pepe *TriggerBroadcast
-	Svg *TriggerBroadcast
 	User *TriggerBroadcast
 	quit chan int
 }
@@ -87,7 +86,6 @@ type TriggerHub struct {
 func NewTriggerHub() *TriggerHub {
 	hub := &TriggerHub{
 		Pepe: NewTriggerBroadcast(),
-		Svg: NewTriggerBroadcast(),
 		User: NewTriggerBroadcast(),
 	}
 	return hub
@@ -116,9 +114,7 @@ func (triggerHub *TriggerHub) TriggerMap(eventHub *events.EventHub) {
 			case newborn := <-eventHub.Newborns:
 				trig := NewTrigger(newborn.PepeId, nil, newborn.Raw.BlockNumber)
 				triggerHub.Pepe.Broadcast(trig)
-				triggerHub.Svg.Broadcast(trig)
 				// Also update the mother and father, since their cooldown changes.
-				// Their SVG will not need to be updated.
 				// If there is no mother/father, or if it's 0, then don't update the father/mother.
 				if newborn.Mother != nil && newborn.Mother.Uint64() != 0 {
 					motherTrig := NewTrigger(newborn.Mother, nil, newborn.Raw.BlockNumber)
@@ -159,6 +155,5 @@ func (triggerHub *TriggerHub) TriggerMap(eventHub *events.EventHub) {
 func (hub *TriggerHub) Stop() {
 	hub.quit <- 0
 	hub.Pepe.Close()
-	hub.Svg.Close()
 }
 
