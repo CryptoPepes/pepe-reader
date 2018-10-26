@@ -199,6 +199,15 @@ The node is accessible from IPC (same UID necessary, run within both docker cont
 To setup testnode in full-sync mode
  (not in archive gc-mode, older state trie is useless, only need old logs):
 
+### Setup existing volume
+```bash
+mkdir /mnt/my-storage
+# ID depends on existing volume, make sure to specify the partition ("-part1"), not just the disk.
+echo '/dev/disk/by-id/scsi-........-part1 /mnt/my-storage ext4 defaults,nofail,discard 0 2' | sudo tee -a /etc/fstab
+# Mount with new fstab config
+sudo mount -a
+```
+
 ### Setup remote:
 
 ```bash
@@ -214,18 +223,19 @@ dokku network:set mainnode bind-all-interfaces true
 # RPC over http/ws is not on by default, as it should be, so no need to do anything for those ports.
 
 # Make volume
+# Create dir if starting a new node from scratch
 mkdir /mnt/my-storage/ethereum
 # note: -o specifies volume-driver options (key=value)
 docker volume create -d local -o type=none -o o=bind -o device=/mnt/my-storage/ethereum ethereum
 # configure persistent shared volume for chaindata
 dokku docker-options:add mainnode deploy,run "-v ethereum:/root/.ethereum"
-# Configure the testnode
-dokku config:set --no-restart mainnode DOKKU_DOCKERFILE_START_CMD="--syncmode=fast --cache=6000"
+# Configure the node
+dokku config:set --no-restart mainnode DOKKU_DOCKERFILE_START_CMD="--syncmode=fast --cache=2048"
 ```
 
 ### Deploy from local to remote:
 
-```
+```bash
 # Go to geth dir
 cd "$GOPATH/src/github.com/ethereum/go-ethereum"
 
